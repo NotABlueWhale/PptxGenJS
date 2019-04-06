@@ -4090,7 +4090,7 @@ var PptxGenJS = function(){
 		arrTextObjects.forEach(function(textObj,idx){
 			// Clear/Increment loop vars
 			paragraphPropXml = '<a:pPr '+ (textObj.options.rtlMode ? ' rtl="1" ' : '');
-			strXmlBullet = '', strXmlParaSpc = '';
+			var strXmlBullet = '', strXmlParaSpc = '';
 			textObj.options.lineIdx = idx;
 
             // Inherit pPr-type options from parent shape's `options`
@@ -4197,7 +4197,7 @@ var PptxGenJS = function(){
 			}
 
 			// Set core XML for use below
-			paraPropXmlCore = paragraphPropXml;
+			var paraPropXmlCore = paragraphPropXml;
 
 			// OPTION: bullet
 			// NOTE: OOXML uses the unicode character set for Bullets
